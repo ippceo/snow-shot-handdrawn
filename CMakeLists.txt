@@ -18,7 +18,7 @@ snow_require_msvc_version()
 include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/SnowWindowsArchitecture.cmake")
 snow_configure_windows_architecture()
 
-set(SNOW_SHOT_VERSION "1.4.1")
+set(SNOW_SHOT_VERSION "1.4.1-handdrawn.1")
 if(NOT SNOW_SHOT_VERSION MATCHES "^([0-9]+\\.[0-9]+\\.[0-9]+)(-[0-9A-Za-z.-]+)?$")
     message(FATAL_ERROR "SNOW_SHOT_VERSION must be a semantic version such as 0.8.0-dev")
 endif()
@@ -53,7 +53,7 @@ set(SNOW_SHOT_EXECUTABLE_NAME "snow_shot")
 set(SNOW_SHOT_VENDOR "Snow Apps")
 set(SNOW_SHOT_DESCRIPTION
     "A screenshot utility for capturing, annotating, pinning, and recognizing screen content.")
-set(SNOW_SHOT_HOMEPAGE_URL "https://snowshot.top")
+set(SNOW_SHOT_HOMEPAGE_URL "https://github.com/ippceo/snow-shot-handdrawn")
 set(SNOW_SHOT_SUPPORT_EMAIL "chao@mgchao.top")
 set(SNOW_SHOT_COPYRIGHT "Copyright (C) 2025-2026 mg-chao")
 

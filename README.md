@@ -1,4 +1,22 @@
-# Snow Apps
+# Snow Shot Handdrawn (fork of Snow Apps)
+
+> **Fork notice**
+>
+> This repository is a fork of [mg-chao/snow-apps](https://github.com/mg-chao/snow-apps).
+> It is not affiliated with, endorsed by, or supported by the upstream author, and it
+> publishes no official binaries. `Snow Shot`, `Snow Apps` and the original artwork remain
+> the work of the upstream author and are used here only to identify the origin of the code.
+>
+> Changes from upstream (GPL-3.0-or-later §5(a) modification notice):
+>
+> | Date | Change |
+> | --- | --- |
+> | 2026-10-26 | Default new shapes and lines to the `Artist` hand-drawn stroke rendering style (`snow_shot/include/snow_shot/presentation/screenshotdefaultstyles.h`, `screenshotcanvastoolstyles.cpp`, `screenshottoolpalettestylecomponents.h`, `screenshottoolpalettestylemodel.h`, `tests/screenshot_tool_palette_tests.cpp`). |
+> | 2026-10-26 | Fork version suffix `1.4.1-handdrawn.1`, update checks pointed at this fork instead of upstream, and automatic update checks disabled by default (`updates/mode` defaults to `manual`). |
+>
+> Upstream source, history and releases: <https://github.com/mg-chao/snow-apps>.
+> Online AI features still use the service configured by `SNOW_APPS_API_BASE_URL`
+> (`https://snowshot.top` by default); this fork does not host its own service.
 
 Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.
 
@@ -9,6 +27,10 @@ OCR preparation, and release validation prerequisites.
 <div style="font-size: 128px">🏗️🚧🦺</div>
 
 ## Install Snow Shot on Windows
+
+> The install commands in this section install the **upstream official build**. This fork
+> has no published releases; build it from source with the commands in
+> [AGENTS.md](AGENTS.md) if you want the hand-drawn defaults.
 
 Download the installer from [Snow Shot releases](https://github.com/mg-chao/snow-apps/releases).
 Install the offline Windows x64 package from the WinGet community repository with:

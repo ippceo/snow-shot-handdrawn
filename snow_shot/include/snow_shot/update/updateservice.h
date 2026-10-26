@@ -48,10 +48,12 @@ class UpdateService final : public QObject {
         // macOS check transport; overrides also support deterministic local-server tests.
         QString installedVersion;
         // Production discovery endpoint; loopback overrides require allowLocalHttp.
-        QUrl githubApiUrl =
-            QUrl(QStringLiteral("https://api.github.com/repos/mg-chao/snow-apps/releases"));
-        QUrl giteeApiUrl =
-            QUrl(QStringLiteral("https://gitee.com/api/v5/repos/mg-chao/snow-apps/releases"));
+        // Fork builds must never discover upstream releases: that would replace the
+        // local hand-drawn changes with an upstream package.
+        QUrl githubApiUrl = QUrl(
+            QStringLiteral("https://api.github.com/repos/ippceo/snow-shot-handdrawn/releases"));
+        QUrl giteeApiUrl = QUrl(QStringLiteral("https://api.github.com/repos/ippceo/"
+                                               "snow-shot-handdrawn/releases"));
         std::chrono::milliseconds requestTimeout = std::chrono::seconds(30);
         // Unset follows the installed distribution. Tests may select the Store policy explicitly.
         std::optional<bool> storeManaged;

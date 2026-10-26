@@ -147,10 +147,10 @@ void updateSettingsPersistAndValidate() {
     const QString path = temporary.filePath(QStringLiteral("config.json"));
     const QString key = QStringLiteral("updates/mode");
 #ifdef Q_OS_MACOS
-    const QString defaultMode = QStringLiteral("check");
+    const QString defaultMode = QStringLiteral("manual");
     const QString nextLaunchMode = QStringLiteral("check");
 #else
-    const QString defaultMode = QStringLiteral("download");
+    const QString defaultMode = QStringLiteral("manual");
     const QString nextLaunchMode = QStringLiteral("next_launch");
 #endif
     {
