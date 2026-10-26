@@ -53,8 +53,7 @@ class ScreenshotToolPaletteRectangleStyleModel final {
     double m_strokeWidth = 2.0;
     QColor m_strokeColor;
     SnowCanvasStrokeStyle m_strokeStyle = SnowCanvasStrokeStyle::Solid;
-    SnowCanvasStrokeRenderingStyle m_strokeRenderingStyle =
-        SnowCanvasStrokeRenderingStyle::Architect;
+    SnowCanvasStrokeRenderingStyle m_strokeRenderingStyle = SnowCanvasStrokeRenderingStyle::Artist;
     QColor m_fillColor;
     SnowCanvasFillStyle m_fillStyle = SnowCanvasFillStyle::Solid;
     SnowCanvasArrowType m_arrowType = SnowCanvasArrowType::Straight;

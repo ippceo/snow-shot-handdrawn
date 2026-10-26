@@ -17566,10 +17566,10 @@ void strokeRenderingControlsPreserveIndependentToolStyles() {
     using Tool = ScreenshotToolPalette::Tool;
     using Rendering = SnowCanvasStrokeRenderingStyle;
     const auto product = snow_shot::presentation::screenshotCanvasStyleDefaults();
-    require(product.rectangle.strokeRenderingStyle == Rendering::Architect &&
-                product.arrow.strokeRenderingStyle == Rendering::Architect &&
-                product.line.strokeRenderingStyle == Rendering::Architect,
-            "Architect should remain the default for each supported tool");
+    require(product.rectangle.strokeRenderingStyle == Rendering::Artist &&
+                product.arrow.strokeRenderingStyle == Rendering::Artist &&
+                product.line.strokeRenderingStyle == Rendering::Artist,
+            "Artist should remain the default for each supported tool");
     ScreenshotToolPalette::Options options;
     options.showLineTool = true;
     options.showFreeDrawTool = true;
@@ -17821,8 +17821,9 @@ void strokeRenderingPreferencesRoundTripAndRejectUnknownValues() {
             const auto rendering =
                 serial ? loaded.serialNumber.strokeRenderingStyle : style.strokeRenderingStyle;
             const auto width = serial ? loaded.serialNumber.strokeWidth : style.strokeWidth;
-            require(rendering == Rendering::Architect && width == 2.0,
-                    "missing or invalid rendering preferences should preserve Architect and other "
+            const auto expectedRendering = serial ? Rendering::Architect : Rendering::Artist;
+            require(rendering == expectedRendering && width == 2.0,
+                    "missing or invalid rendering preferences should preserve defaults and other "
                     "fields");
         }
     }

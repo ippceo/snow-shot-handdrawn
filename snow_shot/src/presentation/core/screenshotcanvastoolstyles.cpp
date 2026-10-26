@@ -331,7 +331,7 @@ void readShapeValue(const QJsonObject& object, SnowCanvasShapeStyle* style,
              static_cast<int>(SnowCanvasArrowhead::IndentedTriangle), &style->endArrowhead);
     readEnum(object, QStringLiteral("stroke_style"),
              static_cast<int>(SnowCanvasStrokeStyle::Dotted), &style->strokeStyle);
-    style->strokeRenderingStyle = SnowCanvasStrokeRenderingStyle::Architect;
+    style->strokeRenderingStyle = SnowCanvasStrokeRenderingStyle::Artist;
     readEnum(object, QStringLiteral("stroke_rendering_style"),
              static_cast<int>(SnowCanvasStrokeRenderingStyle::Cartoonist),
              &style->strokeRenderingStyle);

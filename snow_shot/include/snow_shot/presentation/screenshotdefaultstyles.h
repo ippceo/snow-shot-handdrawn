@@ -21,6 +21,7 @@ inline SnowCanvasStyleDefaults screenshotCanvasStyleDefaults() {
     defaults.rectangle.stroke = red;
     defaults.rectangle.strokeWidth = 2.0;
     defaults.rectangle.strokeStyle = SnowCanvasStrokeStyle::Solid;
+    defaults.rectangle.strokeRenderingStyle = SnowCanvasStrokeRenderingStyle::Artist;
     defaults.rectangle.cornerRadii = {6.0, 6.0, 6.0, 6.0};
 
     defaults.speechBubble = defaults.rectangle;
@@ -42,6 +43,7 @@ inline SnowCanvasStyleDefaults screenshotCanvasStyleDefaults() {
     defaults.line.stroke = red;
     defaults.line.strokeWidth = 2.0;
     defaults.line.strokeStyle = SnowCanvasStrokeStyle::Solid;
+    defaults.line.strokeRenderingStyle = SnowCanvasStrokeRenderingStyle::Artist;
     defaults.line.startArrowhead = SnowCanvasArrowhead::None;
     defaults.line.endArrowhead = SnowCanvasArrowhead::None;
     defaults.line.opacity = 1.0;

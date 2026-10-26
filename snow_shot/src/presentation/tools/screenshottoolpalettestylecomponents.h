@@ -215,8 +215,7 @@ struct ScreenshotToolPaletteStrokeEditorConfig {
     std::function<ScreenshotToolPaletteTranslationText(const QColor& color)> colorTooltip;
     std::function<ScreenshotToolPaletteTranslationText(SnowCanvasStrokeStyle style)> styleTooltip;
     bool renderingStylesEnabled = false;
-    SnowCanvasStrokeRenderingStyle initialRenderingStyle =
-        SnowCanvasStrokeRenderingStyle::Architect;
+    SnowCanvasStrokeRenderingStyle initialRenderingStyle = SnowCanvasStrokeRenderingStyle::Artist;
     std::function<void(SnowCanvasStrokeRenderingStyle)> setRenderingStyle;
 };
 
